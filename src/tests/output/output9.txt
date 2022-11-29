@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+\begin{umlstate}[x=0,y=0,name=Amain]{Global State}
+\begin{umlstate}[x=0,y=0,name=Bgraph]{Sub Graph}
+\umlstateinitial[x=0,y=0,name=Binit]
+\umlbasicstate[x=0,y=-4,name=test1]{Test1}
+\umlbasicstate[x=5,y=-4,name=test2]{Test2}
+\umlstatefinal[x=5,y=-8,name=Bfinal]
+\umltrans[arg=Move]{test1}{test2}
+\umltrans[arg=Initialize]{Binit}{test1}
+\umltrans[arg=End]{test2}{Bfinal}
+\end{umlstate}
+\umlstateinitial[x=10,y=0,name=Ainit]
+\umlstatefinal[x=10,y=-8,name=Afinal]
+\umlbasicstate[x=10,y=-4,name=visu]{Visualization}
+\end{umlstate}
+\umltrans[arg=Search]{Ainit}{visu}
+\umltrans[arg=]{test2}{visu}
+\umltrans[arg=Close]{visu}{Afinal}
+\end{tikzpicture}

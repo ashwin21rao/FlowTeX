@@ -1,0 +1,2 @@
+(flowtex
+  (class test-class))

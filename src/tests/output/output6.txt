@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+\umlclass[x=0,y=0]{test-class1}
+{
+}
+{
+}
+\umlclass[x=0,y=-5]{test-class2}
+{
++ a : int \\
+-- b : float \\
+}
+{
+}
+\umlclass[x=10,y=-5]{test-class3}
+{
+\# a : int \\
+-- b : float \\
+}
+{
++ func1(p1 : int, p2 : bool) : double \\
+\# func2() : char \\
+}
+\umlassoc[mult1=0..1, mult2=*]{test-class1}{test-class2}
+\umlinherit{test-class3}{test-class2}
+\end{tikzpicture}

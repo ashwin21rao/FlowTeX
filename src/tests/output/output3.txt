@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\umlclass[x=0,y=0]{test-class}
+{
+\# a : int \\
+-- b : float \\
+}
+{
++ func1(p1 : int, p2 : bool) : double \\
+\# func2() : char \\
+}
+\end{tikzpicture}

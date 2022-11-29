@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\umlclass[x=0,y=0]{test-class}
+{
++ a : int \\
+-- b : float \\
+}
+{
+}
+\end{tikzpicture}

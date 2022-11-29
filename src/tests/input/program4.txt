@@ -1,0 +1,2 @@
+(flowtex
+  (associate (test-class1 test-class2) (0..1 *)))

@@ -1,0 +1,5 @@
+(flowtex
+  (class test-class
+    (attributelist (protected int a) (private float b))
+    (methodlist (public double func1 (params (int p1) (bool p2)))
+                (protected char func2 (params)))))

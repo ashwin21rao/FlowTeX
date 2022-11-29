@@ -1,0 +1,46 @@
+(flowtex
+  (class test-class1-1)
+
+  (class test-class1-2
+    (attributelist))
+  
+  (class test-class1-3
+    (methodlist))
+  
+  (class test-class1-4
+    (attributelist)
+    (methodlist))
+
+  (class test-class2
+    (attributelist (public int a) (private float b)))
+  
+  (class test-class3
+    (methodlist (public double func1 (params (int p1) (bool p2)))
+                (protected char func2 (params))))
+    
+  (class test-class4
+    (attributelist (protected int a) (private float b))
+    (methodlist (public double func1 (params (int p1) (bool p2)))
+                (protected char func2 (params))))
+
+  (class test-class5
+    (methodlist (public double func1 (params (int p1) (bool p2)))
+                (protected char func2 (params)))
+    (attributelist (protected int a) (private float b)))
+  
+  (associate (test-class1-1 test-class2) (1 1))
+  (associate (test-class1-2 test-class3) (0..1 *))
+  (associate (test-class1-3 test-class4) (1 1..*))
+  (associate (test-class1-4 test-class5) (* 1))
+
+  (inherit test-class1-2 from test-class1-3)
+  (inherit test-class5 from test-class4)
+
+  (position test-class1-1 0 0)
+  (position test-class1-2 0 -5)
+  (position test-class1-3 0 -10)
+  (position test-class1-4 0 -15)
+  (position test-class2 10 0)
+  (position test-class3 10 -5)
+  (position test-class4 10 -10)
+  (position test-class5 10 -15))

@@ -1,0 +1,60 @@
+\begin{tikzpicture}
+\umlclass[x=0,y=0]{test-class1-1}
+{
+}
+{
+}
+\umlclass[x=0,y=-5]{test-class1-2}
+{
+}
+{
+}
+\umlclass[x=0,y=-10]{test-class1-3}
+{
+}
+{
+}
+\umlclass[x=0,y=-15]{test-class1-4}
+{
+}
+{
+}
+\umlclass[x=10,y=0]{test-class2}
+{
++ a : int \\
+-- b : float \\
+}
+{
+}
+\umlclass[x=10,y=-5]{test-class3}
+{
+}
+{
++ func1(p1 : int, p2 : bool) : double \\
+\# func2() : char \\
+}
+\umlclass[x=10,y=-10]{test-class4}
+{
+\# a : int \\
+-- b : float \\
+}
+{
++ func1(p1 : int, p2 : bool) : double \\
+\# func2() : char \\
+}
+\umlclass[x=10,y=-15]{test-class5}
+{
+\# a : int \\
+-- b : float \\
+}
+{
++ func1(p1 : int, p2 : bool) : double \\
+\# func2() : char \\
+}
+\umlassoc[mult1=1, mult2=1]{test-class1-1}{test-class2}
+\umlassoc[mult1=0..1, mult2=*]{test-class1-2}{test-class3}
+\umlassoc[mult1=1, mult2=1..*]{test-class1-3}{test-class4}
+\umlassoc[mult1=*, mult2=1]{test-class1-4}{test-class5}
+\umlinherit{test-class1-2}{test-class1-3}
+\umlinherit{test-class5}{test-class4}
+\end{tikzpicture}
