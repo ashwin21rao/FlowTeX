@@ -1,0 +1,2 @@
+(flowtex
+  (inherit test-class1 from test-class2))

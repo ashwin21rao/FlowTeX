@@ -1,0 +1,3 @@
+(flowtex
+  (class test-class
+    (attributelist (public int a) (private float b))))

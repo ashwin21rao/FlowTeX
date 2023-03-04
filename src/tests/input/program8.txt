@@ -1,0 +1,12 @@
+(flowtex
+  (basicstate initialstate initial)
+
+  (state state1 "State 1"
+    (state substate1 "Substate 1")
+    (state substate2 "Substate 2")
+    (transition substate1 to substate2 "Inside"))
+  
+  (transition initialstate to state1 "Outside")
+  
+  (position initialstate 0 5)
+  (position substate2 0 -5))

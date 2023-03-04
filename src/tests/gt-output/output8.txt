@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\umlstateinitial[x=0,y=5,name=initialstate]
+\begin{umlstate}[x=0,y=0,name=state1]{State 1}
+\umlbasicstate[x=0,y=0,name=substate1]{Substate 1}
+\umlbasicstate[x=0,y=-5,name=substate2]{Substate 2}
+\umltrans[arg=Inside]{substate1}{substate2}
+\end{umlstate}
+\umltrans[arg=Outside]{initialstate}{state1}
+\end{tikzpicture}

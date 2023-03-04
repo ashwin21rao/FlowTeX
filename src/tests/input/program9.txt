@@ -1,0 +1,27 @@
+(flowtex
+  (state Amain "Global State"
+    
+    (state Bgraph "Sub Graph"
+      (basicstate Binit initial)
+      (state test1 "Test1")
+      (state test2 "Test2")
+      (basicstate Bfinal final)
+      
+      (transition test1 to test2 "Move")
+      (transition Binit to test1 "Initialize")
+      (transition test2 to Bfinal "End"))
+    
+    (basicstate Ainit initial)
+    (basicstate Afinal final)
+    (state visu "Visualization"))
+
+    (transition Ainit to visu "Search")
+    (transition test2 to visu "")
+    (transition visu to Afinal "Close")
+    
+    (position test1 0 -4)
+    (position test2 5 -4)
+    (position Bfinal 5 -8)
+    (position Ainit 10 0)
+    (position Afinal 10 -8)
+    (position visu 10 -4))

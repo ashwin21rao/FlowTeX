@@ -1,0 +1,3 @@
+\begin{tikzpicture}
+\umlassoc[mult1=0..1, mult2=*]{test-class1}{test-class2}
+\end{tikzpicture}

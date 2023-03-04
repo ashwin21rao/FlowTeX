@@ -1,0 +1,3 @@
+\begin{tikzpicture}
+\umlinherit{test-class1}{test-class2}
+\end{tikzpicture}
